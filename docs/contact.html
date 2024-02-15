@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="myjs.js" defer></script>
     <link rel="stylesheet" href="Style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <a href="mailto:22036047@saultcollege.ca">Send Email</a>
-    <form action="mailto:22036047@saultcollege.ca" method="GET">
+    <form name="mforms" onsubmit="return verifyform()" action="mailto:22036047@saultcollege.ca" method="post">
         <label for="CC">CC:</label><br>
-        <input type="email" id="CC" name="CC"><br>
+        <input type="email" id="CC" name="CC"><br><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="Subject"><br><br>
-        <label for="message">Message:</label><br>
-        <input type="textarea" id="message" name=""><br><br>
-        <input type="submit" value="Send">
+        <input type="lname" id="lname" name="lname"><br><br>
+        <label for="Message">Message:</label><br>
+        <input type="Message" id="Message" name="Message"><br><br>
+        <label for="Send without header?">Send without header?</label><br>
+        <input type="radio" id="Yes" name="fav_language" value="Yes">
+          <label for="Yes">Yes</label>
+          <input type="radio" id="No" name="fav_language" value="No">
+          <label for="No">No</label><br>
+        <button type="submit" id="submit" value="submit">Send </button>
     </form> 
     <br>
     <a href="index.html">Home</a>
