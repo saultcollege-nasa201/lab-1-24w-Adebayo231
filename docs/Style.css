@@ -26,3 +26,9 @@ body {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+  span {
+    margin-left: 20px;
+    font-size: 18px;
+    color: blue;
+    background-color: yellow;
+  }

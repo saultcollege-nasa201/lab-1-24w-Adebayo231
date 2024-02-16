@@ -2,21 +2,21 @@ function verifyform() {
     var Message = document.forms["mforms"]["Message"].value;
     if (Message == "")
     {
-    alert("Input Message");
+        document.getElementById("MessageError").textContent = "!Please input Message";;
     return false;
     }
 
     var CC = document.forms["mforms"]["CC"].value;
     if (CC == "")
     {
-    alert("Input CC");
+    document.getElementById("emailError").textContent = "!Please input CC";
     return false;
     }
 
     var lname = document.forms["mforms"]["lname"].value;
     if (lname == "")
     {
-    alert("Input Last Name");
+        document.getElementById("lnameError").textContent = "!Please input Last Name";;
     return false;
     }
 
@@ -29,7 +29,7 @@ function verifyform() {
         }
     }
     if (!isChecked) {
-        alert("Please confirm if you want to send without header");
+        document.getElementById("ButtonError").textContent = "!Please select";;
         return false;
     }
 }
